@@ -1,24 +1,5 @@
-# README
+# Tithe.ly Coding Challenge
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The series list can be found at `/series/`
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The sermons list can be found at `/sermons/`
