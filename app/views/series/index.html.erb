@@ -1,0 +1,9 @@
+<%= button_to "Create New Series", new_series_url, method: :get %>
+<ul>
+  <% @series.each do |s| %>
+    <li>
+      <%= link_to s.title, series_url(s) %>
+      <%= image_tag(s.image, class: "img-list")%>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,19 @@
+<h3><%= @series.title %></h3>
+<%= button_to "Edit Series", edit_series_url, method: :get %>
+<%= button_to "Delete Series", series_url, method: :delete %>
+<%= image_tag(@series.image, class: "img-show")%>
+
+<h4>Sermons:</h4>
+<% @series.sermons.each do |s| %>
+  <div class="sermon-list-item">
+    <div class="sermon-list-item--content">
+      <%= link_to s.title, sermon_url(s) %>
+    </div>
+    <div class="sermon-list-item--content">
+      <%= truncate(s.description, length:250) %>
+    </div>
+    <div class="sermon-list-item--content">
+      <%= image_tag(s.image, class: "img-list")%>
+    </div>
+  </div>
+<% end %>

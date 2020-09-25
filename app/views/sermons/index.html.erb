@@ -1,0 +1,19 @@
+<%= button_to "Create New Sermon", new_sermon_url, method: :get %>
+<% @sermons.each do |s| %>
+  <div class="sermon-list-item">
+    <div class="sermon-list-item--content">
+      <h5>Title</h5>
+      <%= link_to s.title, sermon_url(s) %>
+    </div>
+    <div class="sermon-list-item--content">
+      <h5>Description</h5>
+      <%= truncate(s.description, length:250) %>
+    </div>
+    <div class="sermon-list-item--content">
+      <%= image_tag(s.image, class: "img-list")%>
+    </div>
+    <% if s.series %>
+      <%= link_to s.series.title, series_url(s.series) %>
+    <% end %>
+  </div>
+<% end %>

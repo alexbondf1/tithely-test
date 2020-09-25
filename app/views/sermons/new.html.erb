@@ -1,0 +1,14 @@
+<h3>New Sermon Form</h3>
+<%= form_for @sermon, url: sermons_url, method: :post do |f| %>
+  <%= f.label :title, required: true %><br>
+  <%= f.text_field :title %><br><br>
+  <%= f.label :description %><br>
+  <%= f.text_field :description %><br><br>
+  <%= f.label :date %><br>
+  <%= f.datetime_select :date  %><br><br>
+  <%= f.label(:series, "Choose a series") %><br>
+  <%= f.collection_select(:series, Series.all, :id, :title) %><br><br>
+  <%= f.label :image %><br>
+  <%= f.file_field :image %><br><br>
+  <%= f.submit %>
+<%end%>

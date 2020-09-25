@@ -1,0 +1,8 @@
+<h3>Edit Series Form</h3>
+<%= form_for @series, url: series_url(@series), method: :patch do |f| %>
+  <%= f.label :title, required: true %><br>
+  <%= f.text_field :title %><br><br>
+  <%= f.label :image %><br>
+  <%= f.file_field :image %><br><br>
+  <%= f.submit %>
+<%end%>
